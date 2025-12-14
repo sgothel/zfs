@@ -82,6 +82,7 @@ srpm-common:
 		rpmspec="$$rpmspec" \
 		rpm-local || exit 1; \
 	LANG=C $(RPMBUILD) \
+		--nodebuginfo \
 		--define "_tmppath $$rpmbuild/TMP" \
 		--define "_builddir $$rpmbuild/BUILD" \
 		--define "_rpmdir $$rpmbuild/RPMS" \
@@ -103,6 +104,7 @@ rpm-common:
 		rpmspec="$$rpmspec" \
 		rpm-local || exit 1; \
 	LANG=C ${RPMBUILD} \
+		--nodebuginfo \
 		--define "_tmppath $$rpmbuild/TMP" \
 		--define "_builddir $$rpmbuild/BUILD" \
 		--define "_rpmdir $$rpmbuild/RPMS" \
